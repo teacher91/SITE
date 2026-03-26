@@ -1,0 +1,88 @@
+{
+  "sources": [
+    {
+      "id": "lemonde",
+      "name": "Le Monde IA",
+      "url": "https://www.lemonde.fr/intelligence-artificielle/rss_full.xml",
+      "country": "FR",
+      "language": "fr"
+    },
+    {
+      "id": "lesnumeriques",
+      "name": "Les Numériques",
+      "url": "https://www.lesnumeriques.com/rss.xml",
+      "country": "FR",
+      "language": "fr"
+    },
+    {
+      "id": "zdnet-fr",
+      "name": "ZDNet France",
+      "url": "https://www.zdnet.fr/feeds/rss/actualites/",
+      "country": "FR",
+      "language": "fr"
+    },
+    {
+      "id": "journaldunet",
+      "name": "Journal du Net",
+      "url": "https://www.journaldunet.com/rss/all.xml",
+      "country": "FR",
+      "language": "fr"
+    },
+    {
+      "id": "01net",
+      "name": "01net",
+      "url": "https://www.01net.com/rss/info/futur-tech/",
+      "country": "FR",
+      "language": "fr"
+    },
+    {
+      "id": "siecledigital",
+      "name": "Siècle Digital",
+      "url": "https://siecledigital.fr/feed/",
+      "country": "FR",
+      "language": "fr"
+    },
+    {
+      "id": "usinedigitale",
+      "name": "L'Usine Digitale",
+      "url": "https://www.usine-digitale.fr/rss/all.xml",
+      "country": "FR",
+      "language": "fr"
+    },
+    {
+      "id": "radiocanada",
+      "name": "Radio-Canada Tech",
+      "url": "https://ici.radio-canada.ca/rss/4159",
+      "country": "CA",
+      "language": "fr"
+    },
+    {
+      "id": "ledevoir",
+      "name": "Le Devoir Techno",
+      "url": "https://www.ledevoir.com/rss/section/technologie.xml",
+      "country": "CA",
+      "language": "fr"
+    },
+    {
+      "id": "rtbf",
+      "name": "RTBF Techno",
+      "url": "https://www.rtbf.be/rss/info/technologie",
+      "country": "BE",
+      "language": "fr"
+    },
+    {
+      "id": "lecho",
+      "name": "L'Echo",
+      "url": "https://www.lecho.be/rss/all.xml",
+      "country": "BE",
+      "language": "fr"
+    },
+    {
+      "id": "rts",
+      "name": "RTS Techno",
+      "url": "https://www.rts.ch/rss/info/12377811.xml",
+      "country": "CH",
+      "language": "fr"
+    }
+  ]
+}
