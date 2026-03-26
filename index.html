@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Actualités IA francophones en temps réel - France, Belgique, Canada, Suisse">
+    <meta name="theme-color" content="#0a0a0f">
+    <title>SITE IA - Actualités d'Intelligence Artificielle Francophones</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Header sticky -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">SITE IA</span>
+            </div>
+            
+            <div class="header-center">
+                <input type="text" class="search-input" id="searchInput" placeholder="Rechercher actualités...">
+            </div>
+            
+            <div class="header-right">
+                <button class="theme-toggle" id="themeToggle" aria-label="Basculer thème">🌙</button>
+            </div>
+        </div>
+        
+        <!-- Ticker actualités en temps réel -->
+        <div class="ticker-container">
+            <div class="ticker-label">🔴 EN DIRECT</div>
+            <div class="ticker">
+                <div class="ticker-content" id="tickerContent">
+                    <span class="ticker-item">Chargement des actualités...</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="main-container">
+        <!-- Sidebar gauche : Filtres pays -->
+        <aside class="sidebar">
+            <h3 class="sidebar-title">Pays</h3>
+            <div class="filters-countries">
+                <label class="filter-btn active" data-country="ALL">
+                    <input type="radio" name="country" value="ALL" checked>
+                    <span>🌍 Tous</span>
+                </label>
+                <label class="filter-btn" data-country="FR">
+                    <input type="radio" name="country" value="FR">
+                    <span>🇫🇷 France</span>
+                </label>
+                <label class="filter-btn" data-country="CA">
+                    <input type="radio" name="country" value="CA">
+                    <span>🇨🇦 Canada</span>
+                </label>
+                <label class="filter-btn" data-country="BE">
+                    <input type="radio" name="country" value="BE">
+                    <span>🇧🇪 Belgique</span>
+                </label>
+                <label class="filter-btn" data-country="CH">
+                    <input type="radio" name="country" value="CH">
+                    <span>🇨🇭 Suisse</span>
+                </label>
+            </div>
+            
+            <h3 class="sidebar-title">Tendances</h3>
+            <div class="trending-container" id="trendingContainer">
+                <p class="loading">Chargement...</p>
+            </div>
+        </aside>
+
+        <!-- Contenu central : Grille articles -->
+        <section class="articles-section">
+            <!-- Hero section -->
+            <div class="hero">
+                <h1 class="hero-title">Actualités IA Francophones</h1>
+                <p class="hero-subtitle">Les dernières actualités d'Intelligence Artificielle de France, Belgique, Canada et Suisse</p>
+            </div>
+
+            <!-- Loader -->
+            <div class="loader" id="loader">
+                <div class="loader-spinner"></div>
+                <p>Chargement des actualités...</p>
+            </div>
+
+            <!-- Grille articles (masonry) -->
+            <div class="articles-grid" id="articlesGrid">
+                <!-- Articles générés par JS -->
+            </div>
+
+            <!-- Message vide -->
+            <div class="empty-state" id="emptyState" style="display: none;">
+                <p>Aucun article trouvé pour ce filtre.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">📰 Actualités agrégées de sources francophones officielles</p>
+            <p class="footer-meta">
+                Dernière mise à jour: <span id="lastUpdate">--</span> • 
+                Articles: <span id="articlesCount">0</span>
+            </p>
+            <p class="footer-sources">Sources: Le Monde • ZDNet • Radio-Canada • RTBF • RTS • 01net • Siècle Digital...</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/feed.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

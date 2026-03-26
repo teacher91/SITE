@@ -1,0 +1,32 @@
+name: Fetch Francophone Feeds
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Fetch and update feeds
+        run: node scripts/fetch-feeds.js
+
+      - name: Commit updated data
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "GitHub Actions Bot"
+          git add data/articles.json
+          git diff --staged --quiet || git commit -m "🤖 Auto-update flux IA $(date '+%Y-%m-%d %H:%M:%S')" || true
+          git push || echo "Rien à pousser"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
